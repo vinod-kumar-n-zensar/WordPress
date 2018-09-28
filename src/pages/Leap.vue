@@ -53,7 +53,7 @@
                                     <p>{{info.toggleVolume.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleVolume.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
-                            <button class="btn btn-primary btn-lg mt-auto    mx-auto" data-bi-bhvr="Volume Tab" data-bi-dlnm="toggle Volume"  data-bi-dltype="Volume" v-on:click.stop="toggle = !toggle"><span v-show="toggle"><font-awesome-icon   icon="chevron-left" /> {{info.toggleVolume.toggleInfoSecondary.btnText}}</span><span v-show="!toggle">{{info.toggleVolume.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
+                            <button class="btn btn-primary btn-lg mt-auto mx-auto" id="volumeTab" data-bi-bhvr="Volume Tab" data-bi-dlnm="toggle Volume"  data-bi-dltype="Volume" v-on:click.stop="toggle = !toggle"><span v-show="toggle"><font-awesome-icon   icon="chevron-left" /> {{info.toggleVolume.toggleInfoSecondary.btnText}}</span><span v-show="!toggle">{{info.toggleVolume.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 imageContainer d-none d-md-none d-lg-block" >
@@ -77,7 +77,7 @@
                                     <p>{{info.toggleVelocity.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleVelocity.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
-                            <button class="btn btn-primary btn-lg mt-auto    mx-auto" data-bi-bhvr="Velocity Tab" data-bi-dlnm="toggle Velocity"  data-bi-dltype="Velocity" v-on:click.stop="velocity = !velocity"><span v-show="velocity"><font-awesome-icon   icon="chevron-left" /> {{info.toggleVelocity.toggleInfoSecondary.btnText}}</span><span v-show="!velocity">{{info.toggleVelocity.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
+                            <button class="btn btn-primary btn-lg mt-auto mx-auto" id="velocityTab"  data-bi-bhvr="Velocity Tab" data-bi-dlnm="toggle Velocity"  data-bi-dltype="Velocity" v-on:click.stop="velocity = !velocity"><span v-show="velocity"><font-awesome-icon   icon="chevron-left" /> {{info.toggleVelocity.toggleInfoSecondary.btnText}}</span><span v-show="!velocity">{{info.toggleVelocity.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
                             </div>
                         </div>
                     </div>
@@ -95,7 +95,7 @@
                                     <p>{{info.toggleVariety.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleVariety.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
-                            <button class="btn btn-primary btn-lg mt-auto    mx-auto"  data-bi-bhvr="Variety Tab" data-bi-dlnm="toggle Variety"  data-bi-dltype="Variety" v-on:click.stop="variety = !variety"><span v-show="variety"><font-awesome-icon   icon="chevron-left" /> {{info.toggleVariety.toggleInfoSecondary.btnText}}</span><span v-show="!variety">{{info.toggleVariety.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
+                            <button class="btn btn-primary btn-lg mt-auto mx-auto" id="varietyTab"  data-bi-bhvr="Variety Tab" data-bi-dlnm="toggle Variety"  data-bi-dltype="Variety" v-on:click.stop="variety = !variety"><span v-show="variety"><font-awesome-icon   icon="chevron-left" /> {{info.toggleVariety.toggleInfoSecondary.btnText}}</span><span v-show="!variety">{{info.toggleVariety.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 imageContainer d-none d-md-none d-lg-block" >
@@ -119,7 +119,7 @@
                                     <p>{{info.toggleDynamic.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleDynamic.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
-                            <button class="btn btn-primary btn-lg mt-auto    mx-auto" data-bi-bhvr="Dynamic Tab" data-bi-dlnm="toggle Dynamic"  data-bi-dltype="Dynamic" v-on:click.stop="dynamic = !dynamic"><span v-show="dynamic"><font-awesome-icon   icon="chevron-left" /> {{info.toggleDynamic.toggleInfoSecondary.btnText}}</span><span v-show="!dynamic">{{info.toggleDynamic.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
+                            <button class="btn btn-primary btn-lg mt-auto mx-auto" id="dynamicTab" data-bi-bhvr="Dynamic Tab" data-bi-dlnm="toggle Dynamic"  data-bi-dltype="Dynamic" v-on:click.stop="dynamic = !dynamic"><span v-show="dynamic"><font-awesome-icon   icon="chevron-left" /> {{info.toggleDynamic.toggleInfoSecondary.btnText}}</span><span v-show="!dynamic">{{info.toggleDynamic.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
                             </div>
                         </div>
                 </div>
@@ -138,7 +138,7 @@
                                     <p>{{info.toggleGlobal.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleGlobal.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
-                            <button class="btn btn-primary btn-lg mt-auto    mx-auto"  data-bi-bhvr="global Tab" data-bi-dlnm="toggle global"  data-bi-dltype="global" v-on:click.stop="global = !global"><span v-show="global"><font-awesome-icon   icon="chevron-left" /> {{info.toggleGlobal.toggleInfoSecondary.btnText}}</span><span v-show="!global">{{info.toggleGlobal.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
+                            <button class="btn btn-primary btn-lg mt-auto mx-auto" id="globalTab" data-bi-bhvr="global Tab" data-bi-dlnm="toggle global"  data-bi-dltype="global" v-on:click.stop="global = !global"><span v-show="global"><font-awesome-icon   icon="chevron-left" /> {{info.toggleGlobal.toggleInfoSecondary.btnText}}</span><span v-show="!global">{{info.toggleGlobal.toggleInfoPrimary.btnText}} <font-awesome-icon   icon="chevron-right" /></span></button>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 imageContainer d-none d-md-none d-lg-block" >

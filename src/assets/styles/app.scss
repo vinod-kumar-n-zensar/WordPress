@@ -7,6 +7,7 @@ body{
         z-index: 9999;
     }
 }
+body.modal-open { position: fixed; }
 // wordpress Styles Starts
 .entry-footer, .entry-header{
     display: none !important;
@@ -45,7 +46,7 @@ body{
     background-size:cover;
 }
 #dbcosmos.common-banner-fix{
-        background-position: 50%;
+    background-position: center top;
 }
 // Slider 
 .vue-slider-component .vue-slider-process{
@@ -109,6 +110,9 @@ body{
 footer{
     .common-page-head{
         @include my-padding-mixin(80px 0)
+    }
+    h1{
+        font-weight: 700;
     }
 }
 .svg-inline--fa{
@@ -205,6 +209,9 @@ select, .v-select input[type=search], .v-select input[type=search]:focus, .v-sel
 }
 .vue-slider-piecewise-item.active .vue-slider-piecewise-label{
     color: $bgColorPrimary;
+}
+.vue-slider-component .vue-slider-tooltip-wrap.vue-merged-tooltip{
+    display: none;
 }
 span.vue-slider-piecewise-label{
     font-size: 14.5px !important;
@@ -515,7 +522,6 @@ footer{
     }
     #leap{
         .btn-primary{
-            width:70%;
             font-size: 16.5px;
         }
     }
@@ -597,6 +603,11 @@ footer{
 }
 // Large screens
 @media only screen and (min-width: 64.063em) {
+    #deliver {
+        .common-page-head {
+            @include my-padding-mixin(100px 0)
+        }
+    }
     .prefixTitle{
         padding-bottom: 100px;
     }
@@ -674,11 +685,6 @@ footer{
     .common-card-padd{
         @include my-padding-mixin(100px 0)
     }
-    #leap{
-        .btn-primary{
-            width: 50%;
-        }
-    }
     footer{
         .common-page-head{
             h2{
@@ -690,10 +696,21 @@ footer{
                 font-size: 18.75px;
             
             }
-        }       
+        }    
+        .db-link-box{
+            #AzureCosmosDBLink{
+                width: 37%;
+            }
+        }   
     }
     .db-link-box{
-        margin-top: 40%;
+        margin-top: 43%;
+    }
+    #leap .toggleVolume{
+        padding-top: 10px;
+    }
+    .copyriteText-container p{
+        font-size: 12.75px;
     }
 } /* min-width 1025px, large screens */
 
