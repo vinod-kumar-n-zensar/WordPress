@@ -1,0 +1,708 @@
+@import 'variables.scss';
+body{
+    color: $fontColor;
+}
+.modal-body{
+    .form-group input{
+        z-index: 9999;
+    }
+}
+// wordpress Styles Starts
+.entry-footer, .entry-header{
+    display: none !important;
+}
+.site-footer, .hentry{
+    margin: 0 !important;
+}
+.custom-control-label a{
+    color: $bgColorPrimary;
+    p{
+        line-height: 1.25rem;
+    }
+}
+// wordpress Styles St
+// Nav Bar
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link{
+    color: $fontColor;
+    text-align: center;
+    
+}
+.navbar-light .navbar-toggler{
+    border: none;
+}
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active{
+    color: $bgColorPrimary;
+}
+.nav-tabs .nav-link:hover, .nav-tabs .nav-link:focus{
+    border-color: transparent;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, .btn:focus, .btn.focus {
+    box-shadow: none !important;
+}
+.common-banner-fix{
+    background-repeat: no-repeat;
+    height:100%;
+    background-size:cover;
+}
+#dbcosmos.common-banner-fix{
+        background-position: 50%;
+}
+// Slider 
+.vue-slider-component .vue-slider-process{
+    background: transparent;
+}
+.sliderBox{
+    border-radius: 15px;
+    background-color: #ccc;
+}
+.vue-slider-piecewise-item {
+    width: auto !important;
+}
+.vue-slider-component .vue-slider {
+    border-radius: 0;
+    background-color: transparent;
+}
+.banner{
+    h1{
+        line-height: 1.5
+    }
+    h3{
+        color: $white;
+    }
+    #color-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $overlayColor;
+        opacity:0.75;
+     }
+}
+.font-secondary-color{
+    color: $white;
+}
+.common-page-head{
+    background: $page-head-color;
+    color:$white;
+}
+.common-banner-head{
+    color: $fontColorSecond;
+}
+.common-page-subhead{
+    background:$page-sub-head-color;
+}
+.common-padd-btm{
+    @include my-padding-mixin(0 0 100px 0)
+}
+.common-card-info p strong {
+    text-transform: lowercase;
+}
+.common-footer-color{
+    background:$footer-bg-color;
+    color: $white;
+    @include my-padding-mixin(80px 0)
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus, .btn:focus, .btn.focus {
+    box-shadow: none !important;
+}
+footer{
+    .common-page-head{
+        @include my-padding-mixin(80px 0)
+    }
+}
+.svg-inline--fa{
+    vertical-align: baseline
+}
+.field.error input,.field.error select,.v-select.searchable.error .dropdown-toggle {
+    border:1px solid $error-border-color;
+    background: $error-background-color;
+}
+.dropdown-toggle::after{
+    border: none;
+}
+.dropdown-toggle{
+    border: .0625rem solid rgba(0,0,0,.4);
+}
+select, .v-select input[type=search], .v-select input[type=search]:focus, .v-select.single .selected-tag, .vs__selected-options{
+    font-size: 1rem;
+}
+.v-select .dropdown-menu{
+    max-height: 300px !important;
+}
+.border-bottom-black{
+    border-bottom: 1px solid $fontColor;
+}
+.border-top-black{
+    border-top: 1px solid $fontColor;
+}
+.banner h3, #SignInModal h3{
+    @include font-weight(normal)
+}
+.btnNosign{
+    background: $footer-bg-color;
+    @include border(1px,solid, $white);
+    color:$white;
+}
+.btnNosign:hover{
+    @include btn-hover($bgColorPrimary,$white)
+}
+#SignInModal .modal-content{
+    @include my-padding-mixin(0 10px)
+}
+.grey{
+    color: $faded-color;
+}
+.blue{
+    color:$bgColorPrimary;
+}
+.navbar-light .navbar-nav li:last-child a{
+    color: $bgColorPrimary !important;
+}
+#leap .imageContainer{
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.card{
+    box-shadow: 1px 4px 7px 2px rgba(0,0,0,0.25);
+}
+.common-card-info{
+    background: $card-bg-color;
+    border-radius: 0;
+    border: 0;
+}
+.imageContainer img{
+    width: 100%;
+}
+.common-card-info.active{
+    background: $bgColorPrimary;
+    color: $white;
+}
+.common-card-info.active h3{
+    color: $white;
+}
+.common-border-bottom{
+    border-bottom: 1px solid $white;
+}
+.common-card{
+    @include my-padding-mixin(20px 0)
+}
+.common-card-info{
+    @include my-padding-mixin(15px)
+}
+.no-padd{
+    @include my-padding-mixin(0)
+}
+.tabView .tab-content img{
+    width: 100%;
+}
+.tabView .tab-content div{
+    @include my-padding-mixin(20px 0)
+} 
+.vue-slider-component .vue-slider-piecewise{
+    top: -80px;
+}
+.vue-slider-piecewise-item.active .vue-slider-piecewise-label{
+    color: $bgColorPrimary;
+}
+span.vue-slider-piecewise-label{
+    font-size: 14.5px !important;
+    font-weight: 700;
+    .fa-chevron-right{
+        vertical-align: sub;
+    }
+}
+.modal-body {
+    .form-control{
+        border: 1px solid #ced4da;
+    }
+    .dropdown-toggle {
+        .form-control{
+            border:none;
+        }
+    }
+    .form-control, .dropdown-toggle{
+        width: 98%;
+        border-radius: 0;
+    }
+    .field{
+        position: relative;
+    }
+    .field::before{
+        content: "*";
+        display: block;
+        position: absolute;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        font-family: Arial, Helvetica, sans-serif;
+        right: -6px;
+        top: 4px;
+        bottom: 0;
+        margin: auto 0;
+        z-index: 1;
+        line-height: normal;
+        font-size: 2em;
+        padding-top: 8px;
+        color: rgba(0, 0, 0, 0.3);
+    }
+    .v-select .vs__actions,.v-select .dropdown-toggle{
+        @include my-padding-mixin(0 5px 0 0);
+        border-radius:0;
+    }
+    .v-select input[type=search], .v-select input[type=search]:focus{
+        margin: 0;
+    }
+}
+.modal-footer{
+    .btn-primary{
+        border-radius: 0;
+    }
+}
+// Tab Style Starts
+#pills-tab li a{
+    padding: 10px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s ease 0s;
+    color: $fontColor
+}
+#pills-tab li a:hover,
+#pills-tab li a.active, { border: none; color: $bgColorPrimary; }
+.vue-slider-component .vue-slider-dot{
+    background: $imageurl;
+    background-size: contain;
+    border-radius: 0;
+    box-shadow: unset;
+}
+
+ .tabView{
+     #controlTab.nav-tabs{
+        .nav-item{
+            @include my-padding-mixin(0)
+        }
+         .nav-link.active, .nav-item.show .nav-link{
+            background-color:$bgColorPrimary;
+            color: $white;
+            border: 1px solid $bgColorPrimary;
+            border-radius: 0;
+        }
+        .nav-link{
+            color: $fontColor;
+            font-weight: 600;
+            padding: 15px 10px;
+            font-size: 1.17rem;
+        }
+     }
+    
+    #controlTabContent.tab-content{
+         div{
+            border: 1px solid $bgColorPrimary;
+            @include my-padding-mixin(30px)
+        }
+    }
+ } 
+// Tab Style Ends
+//Toggle View
+#leap{
+.common-card-info.card.active {
+    .btn{
+        background: $bgColorPrimary;
+        color: $white;
+        border: 2px solid $white;
+    }
+}
+}
+.banner{
+    h3{
+        line-height: 1.5;
+    }
+}
+// Range Container 
+.rangeContainer span{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.rangeContainer span.Higher{
+    @include bg($bgColorPrimary)
+}
+.rangeContainer span.Lower{
+    @include bg($card-bg-color)
+}
+//Footer Styles
+.link-box{
+    @include border(2px,solid,$bgColorPrimary);
+    @include bg($white);
+    @include my-padding-mixin(20px);
+}
+footer{
+    .common-page-head{
+        h2{
+            line-height: 1.4;
+            font-weight: 600;
+        }
+    }
+}
+.cursor-pointer{
+    cursor: pointer
+}
+// Animations
+
+.animate {
+    transition-delay: .1s;
+    transition-duration: .25s;
+    transition-timing-function: ease-in;
+  }
+   
+  .slide-up {
+    transform: translateY(0)
+  }
+   
+  .slide-up.animate-active {
+    transform: translateY(-100px)
+  }
+  .mktoForm{
+      display: none;
+  }
+  .commonGutSpaceBtm{
+    margin-bottom: 50px;
+  }
+  .commonGutSpaceTop{
+    margin-top: 50px;
+  }
+  .paddTop{
+      padding-top: 30px;
+  }
+  .common-page-head.common-border-bottom{
+      @include my-padding-mixin(100px 0);
+  }
+  .common-page-head, .common-page-subhead{
+    @include my-padding-mixin(50px 0)
+}
+.db-link-box{
+    margin-top:40%;
+}
+//Btn Animations
+#leap{
+    .btn-primary{
+        position: relative;
+        background: $white;
+        color: $bgColorPrimary;
+        font-size: 21px;
+        border: 2px solid $bgColorPrimary;
+        border-radius: 0;
+    }
+    .btn-primary:hover{
+        background: $bgColorPrimary;
+        color: $white;
+        border-color: $bgColorPrimary;
+    }
+    .btn svg{
+        margin-left: 15px;
+    }
+    .common-card-info.card.active {
+        .btn-primary:hover{
+            background: $white;
+            color: $bgColorPrimary;
+            border-color: $white;
+        }
+        .btn svg{
+            margin-right: 15px;
+        }
+    }
+.fa-chevron-right, .fa-chevron-left{
+    vertical-align: middle;
+
+  }
+}
+  .custom-control-label{
+      p{
+          margin-left: 10px;
+      }
+  }
+  .custom-control-label::before, .custom-control-label::after{
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 53px;
+    border: 2px solid $faded-color;
+    border-radius: 0;
+    background: none;
+  }
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+      background: none;
+  }
+  .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after{
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-1 -1 8 8'%3E%3Cpath fill='"+$bgColorPrimary+"' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E");
+    background-size: 67% 77%;
+    background-repeat: no-repeat;
+    background-position: 36% 30%;
+  }
+// Small screens
+@media only screen { 
+    body{font-size: 10px;}
+    p{
+        font-size: 15px;
+    }
+} /* Define mobile styles */
+@media only screen and (max-width: 40em) {
+    .navbar-brand{
+        width: 40%;
+    }
+    // Common font size 
+    h3 {
+        font-size: 16.8px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    h4{
+        font-size: 14.7px;
+    }
+    footer p{
+        font-size: 10.5px;
+    }
+    a.nav-link{
+        font-size: 16.5px;
+    }
+    .toggleVolume{
+        @include margin(20px 0 0 0)
+    }
+    .toggleVolume h2{
+        @include margin(10px 0 30px 0)
+    }
+    .common-mob-padd-fix{
+        padding-right:15px;
+        padding-left:15px;
+    }
+    .common-page-head, .common-page-subhead {
+        padding: 20px 0;
+    }
+    #cosmos {
+        li.nav-item{
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+        #pills-tab li a{
+            margin-right: 0px;
+            font-weight: 600;
+        }
+    }
+    .rangeContainer {
+        display: inline;
+        width: auto;
+    }
+    footer{
+        .common-banner-fix{
+            background-position: center;
+        }
+    }
+    .common-div{
+        @include my-padding-mixin(20px 0)
+    }
+    #leap{
+        .btn-primary{
+            width:70%;
+            font-size: 16.5px;
+        }
+    }
+    .common-padd-btm{
+        @include my-padding-mixin(0 0 50px 0)
+    }
+    .common-page-head.common-border-bottom, footer .common-page-head{
+        @include my-padding-mixin(20px 0)
+    }
+    .custom-control-label::before, .custom-control-label::after{
+        top: 62px;
+    }
+ } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+
+// Medium screens
+@media only screen and (min-width: 40.063em) {
+    .common-page-img-fix .common-page-subhead .imageContainer img{
+        position: absolute;
+        bottom: 4px;
+        left: -5px;
+        width: 100%;
+    }
+    .common-padd-btm{
+        @include my-padding-mixin(0 0 100px 0)
+    }
+    .common-page-head.common-border-bottom, footer .common-page-head{
+        @include my-padding-mixin(50px 0)
+    }
+    .common-div{
+        @include my-padding-mixin(100px 0)
+    }
+ } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2.5em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h4{
+        font-size: 18.75px;
+    }
+    a.nav-link{
+        font-size: 16.5px;
+    }
+    #dbcosmos{
+        .common-banner-fix{
+            background-position: 50%;
+        }
+    }
+    .prefixTitle{
+        padding-bottom: 100px;
+    }
+ } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+
+ @media only screen and (width : 1024px) {
+    .common-page-img-fix {
+        .common-page-subhead .imageContainer img{
+            position: absolute;
+            bottom: -26px;
+            left: -5px;
+        }
+    }
+    .navbar-nav li a{
+        @include borderLeft;
+    }
+    .banner{
+        h3{
+            color: $fontColor;
+        }
+    }
+    .prefixTitle{
+        padding-bottom: 100px;
+    }
+}
+// Large screens
+@media only screen and (min-width: 64.063em) {
+    .prefixTitle{
+        padding-bottom: 100px;
+    }
+    #pills-tab li{
+        a strong{
+            position: relative;
+        }
+        a .fa-chevron-right{
+            position: absolute;
+            top: 6px;
+            right: -13px;
+        }
+    }
+    #pills-tab li:first-child a{
+        text-align: left; 
+        strong{
+            position: relative;
+            left: 10px;
+        }
+    } 
+    #pills-tab li:last-child a{
+        text-align: right;
+        strong{
+            position: relative;
+            left: 13px;
+        }
+    } 
+    .banner{
+        h3{
+            color: $fontColor;
+        }
+    }
+    .navbar-nav li a{
+        @include borderLeft;
+        font-size: 15px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        @include my-padding-mixin(10px 20px)
+    }
+    .common-page-head{
+        @include my-padding-mixin(52px 0)
+    }
+    .common-page-head.leapFooter{
+        @include my-padding-mixin(102px 0)
+    }
+    .common-page-subhead{
+        @include my-padding-mixin(70px 0)
+    }
+    a.nav-link{
+        font-size: 16.5px;
+    }
+    h1{
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 25.5px;
+    }
+    .common-card{
+        @include my-padding-mixin(40px 0)
+    }
+    .common-card-info{
+        @include my-padding-mixin(25px)
+    }
+    .absContainer img{
+        position: absolute;
+        bottom: -57px;
+    }
+    .common-page-img-fix .common-page-subhead .imageContainer img{
+        position: absolute;
+        bottom: -61px;
+    }
+    .common-page-img-fix .common-page-subhead{
+        @include my-padding-mixin(50px 0 100px 0)
+    }
+    .common-card-padd{
+        @include my-padding-mixin(100px 0)
+    }
+    #leap{
+        .btn-primary{
+            width: 50%;
+        }
+    }
+    footer{
+        .common-page-head{
+            h2{
+                line-height: 1.4;
+                font-weight: normal;
+            }
+            h4{
+                font-weight: 600;
+                font-size: 18.75px;
+            
+            }
+        }       
+    }
+    .db-link-box{
+        margin-top: 40%;
+    }
+} /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+
+// XLarge screens
+@media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+
+// XXLarge screens
+@media only screen and (min-width: 120.063em) { } /* min-width 1921px, xxlarge screens */
