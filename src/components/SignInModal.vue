@@ -62,6 +62,9 @@
                   :class="{'error':errors.has('jobRole')}"
                   placeholder="Choose Job Role"
             ></v-select>
+            <select name="" id="" class="form-control">
+              <option v-for="items in modalData.coutryList">{{items.name}}</option>
+            </select>
               </div>
           </div>
           <div class="">
@@ -146,9 +149,9 @@
             
         },
         beforeMount(){
-          this.callMktoForms();
           this.jobData = this.modalData.jobRole;
           this.countryData = this.modalData.coutryList;
+          this.callMktoForms();
         }
     }
 </script>

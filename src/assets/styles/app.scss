@@ -140,6 +140,9 @@ select, .v-select input[type=search], .v-select input[type=search]:focus, .v-sel
     max-height: 300px !important;
     width: 98% !important;
 }
+.vs__actions{
+    display: none !important;
+}
 .border-bottom-black{
     border-bottom: 1px solid $fontColor;
 }

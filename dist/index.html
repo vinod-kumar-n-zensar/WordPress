@@ -9,6 +9,25 @@
   <body>
       <script src="http://app-sj18.marketo.com/js/forms2/js/forms2.min.js"></script>
     <div id="app"></div>
-    <script></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      function triggerChange(){
+
+        jQuery('.mktoForm  #Country').change();
+        if(jQuery('.optIn.opt-in .mktoCheckboxList').css("display")=="block"){
+          setTimeout(function () {
+            jQuery('.custom-checkbox').addClass('active')
+        }, 200);
+          
+        } else if(jQuery('.optOut.opt-out .mktoCheckboxList').css("display")=="block"){
+          setTimeout(function () {
+            jQuery('.custom-checkbox').addClass('active')
+        }, 200);
+          
+        }else {
+          jQuery('.custom-checkbox').removeClass('active')
+        }
+      }
+    </script>
   <script type="text/javascript" src="main.js"></script></body>
 </html>
