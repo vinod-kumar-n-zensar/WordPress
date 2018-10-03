@@ -141,7 +141,17 @@ select, .v-select input[type=search], .v-select input[type=search]:focus, .v-sel
     width: 98% !important;
 }
 .vs__actions{
-    display: none !important;
+    .open-indicator:before{
+        transform: rotate(0) !important;
+        border-left: 5px solid transparent  !important;
+        border-right: 5px solid transparent  !important;
+        border-top: 5px solid $fontColor  !important;
+        height: 0 !important;
+        width: 0 !important;
+    }
+    .clear{
+        display: none !important;
+    }
 }
 .border-bottom-black{
     border-bottom: 1px solid $fontColor;
@@ -505,9 +515,6 @@ footer{
   }
   .mktoFormRow.optOut.opt-out{
       display: none;
-  }
-  .vs__actions{
-      width: 42px;
   }
 // Small screens
 @media only screen { 

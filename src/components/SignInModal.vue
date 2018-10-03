@@ -65,7 +65,10 @@
               </div>
           </div>
           <div class="">
-          <div class="custom-control custom-checkbox checkbox-circle my-1 mr-sm-2">
+            <div class="custom-control custom-checkbox checkbox-circle my-1 mr-sm-2 wtc">
+            <p>{{modalData.footerInfo}} <a v-bind:href="modalData.link.url" target="_blank"><span>{{modalData.link.text}}</span></a></p>
+          </div>
+          <div class="custom-control custom-checkbox checkbox-circle my-1 mr-sm-2 wc">
             <input type="checkbox" class="custom-control-input" id="customControlInline">
             <label class="custom-control-label" for="customControlInline"><p>{{modalData.footerInfo}} <a v-bind:href="modalData.link.url" target="_blank"><span>{{modalData.link.text}}</span></a></p></label>
           </div>
@@ -138,16 +141,13 @@
           },
           callme: selected =>{
             jQuery('.mktoForm  #Country option[value="' + $.trim(selected.name) + '"]').attr("selected", "selected");
-            this.triggerU();
+            triggerChange();
             },
-            triggerU(){
-              jQuery('#Country').change();
-            }
         },
         beforeMount(){
-          this.callMktoForms();
           this.jobData = this.modalData.jobRole;
           this.countryData = this.modalData.coutryList;
+          this.callMktoForms();
         }
     }
 </script>
