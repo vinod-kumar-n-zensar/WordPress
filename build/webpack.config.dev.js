@@ -3,11 +3,13 @@ const webpack = require('webpack')
 const { VueLoaderPlugin } = require('vue-loader')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 //const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
 module.exports = {
   mode: 'development',
   
   entry: [
     './src/app.js'
+    
   ],
   devServer: {
     port: 2000,
@@ -67,4 +69,5 @@ module.exports = {
    //   test: /\.js(\?.*)?$/i
     //})
   ]
+  
 }

@@ -468,6 +468,21 @@ footer{
           margin-left: 10px;
       }
   }
+  .custom-checkbox.wc{
+      display: none;
+  }
+  .custom-checkbox.wtc.active{
+      display: none;
+  }
+  .custom-checkbox.wtc{
+      @include my-padding-mixin(0);
+  }
+  .custom-checkbox.wc.active{
+      display: block;
+  }
+  .mktoForm{
+      display: none;
+  }
   .custom-control-label::before, .custom-control-label::after{
     width: 1.5rem;
     height: 1.5rem;
@@ -582,7 +597,7 @@ footer{
         @include my-padding-mixin(20px 0)
     }
     .custom-control-label::before, .custom-control-label::after{
-        top: 62px;
+        top: 20px;
     }
     .db-link-box{
         margin-top: 88%;
@@ -603,7 +618,7 @@ footer{
 // Medium screens
 @media only screen and (min-width: 40.063em) {
     .md-d{
-        padding-top: 350px;
+        padding-top: 400px;
     }
     .common-page-img-fix .common-page-subhead .imageContainer img{
         position: absolute;

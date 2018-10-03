@@ -12,7 +12,7 @@ import AOS from 'aos';
 import "aos/dist/aos.css";
 import vSelect from 'vue-select';
 import VueMatchHeights from 'vue-match-heights';
-import $ from 'jquery'; 
+
 Vue.use(VueMatchHeights, {
 });
 Vue.use(VueScrollTo)
@@ -32,5 +32,10 @@ new Vue({
   render (h){
     return h(App);
 },
+mounted(){
+  var scriptTag = document.createElement("script");
+  scriptTag.src = "https://info.microsoft.com/rs/157-GQE-382/images/form_translations_and_legal_v2.js";
+  document.getElementsByTagName('body')[0].appendChild(scriptTag)
+}
 })
 

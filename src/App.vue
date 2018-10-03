@@ -58,7 +58,8 @@
     import MsControl from './pages/Control.vue';
     import MsDeliver from './pages/Deliver.vue';
     import MsCosmos from './pages/AzureCosmosDb.vue';
-    import MsFooter from './components/Footer.vue'
+    import MsFooter from './components/Footer.vue';
+    window.$ = window.jQuery = require("jquery");
     export default {
   components: {
     MsHeader,
