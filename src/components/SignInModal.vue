@@ -32,7 +32,7 @@
           </div>
           <div class="form-group">
              <div class="field" :class="{error: errors.has('Country')}">
-                <v-select  v-model="Country"
+                <v-select 
                   v-validate="'required'" 
                   data-vv-value-path="mutableValue" 
                   data-vv-name="Country" 
@@ -41,6 +41,7 @@
                   :has-error="errors.has('Country')"
                   :class="{'error':errors.has('Country')}"
                   placeholder="Choose Country"
+                  :on-change="callme"
             ></v-select>
               </div>
           </div>
@@ -50,7 +51,7 @@
               </div>
           </div>
           <div class="form-group">
-             <div class="field" :class="{error: errors.has('jobRole')}">
+             <div class="field country-select" :class="{error: errors.has('jobRole')}">
                 <v-select v-model="jobRole"
                   v-validate="'required'" 
                   data-vv-value-path="mutableValue" 
@@ -70,8 +71,8 @@
           </div>
         </div> 
       </div>
-      <div class="modal-footer">
-        <button type="submit" :disabled="errors.any()" ref="btnSubmit" class="btn btn-primary mx-auto btn-lg"  data-bi-bhvr="submit modal form" data-bi-dlnm="subit data from signup modal"  data-bi-dltype="submit link">Get Started</button>
+      <div class="modal-footer justify-content-center">
+        <button type="submit" :disabled="errors.any()" ref="btnSubmit" class="btn btn-primary  btn-lg"  data-bi-bhvr="submit modal form" data-bi-dlnm="subit data from signup modal"  data-bi-dltype="submit link">Get Started</button>
       </div>
       </form>
       <form id="mktoForm_14282"></form>
@@ -79,11 +80,8 @@
   </div>
 </div>
 </template>
-<script>MktoForms2.loadForm("//app-sj18.marketo.com", "157-GQE-382", 14282);</script>
-
 <script>
   import Vue from 'vue';
-  import jq from 'jquery';
     export default{
         props:{
             modalData: Object,
@@ -99,7 +97,7 @@
             jobRole:'',
             signed:'',
             jobData:'',
-            countryData:''
+            countryData:'',
           }
         },
         methods:{
@@ -107,18 +105,18 @@
             this.$validator.validateAll().then(
               result =>{
                  if (!this.errors.any()) {
-                    jq('.mktoForm  #FirstName').val(this.FirstName);
-                    jq('.mktoForm  #LastName').val(this.LastName);
-                    jq('.mktoForm  #Email').val(this.Email);
-                    jq('.mktoForm  #Company').val(this.Company);
-                    jq('.mktoForm  #Country option[value="' + this.Country.name + '"]').attr("selected", "selected");
-                    jq('.mktoForm  #Title option[value="' + this.jobRole.name + '"]').attr("selected", "selected");
-                    if(jq('#customControlInline:checked').length > 0){
-                      jq('.mktoCheckboxList input').prop('checked', true)
+                    jQuery('.mktoForm  #FirstName').val(this.FirstName);
+                    jQuery('.mktoForm  #LastName').val(this.LastName);
+                    jQuery('.mktoForm  #Email').val(this.Email);
+                    jQuery('.mktoForm  #Company').val(this.Company);
+                    jQuery('.mktoForm  #Country option[value="' + this.Country.name + '"]').attr("selected", "selected");
+                    jQuery('.mktoForm  #Title option[value="' + this.jobRole.name + '"]').attr("selected", "selected");
+                    if(jQuery('#customControlInline:checked').length > 0){
+                      jQuery('.mktoCheckboxList input').prop('checked', true)
                     }else{
-                      jq('.mktoCheckboxList input').prop('checked', false)
+                      jQuery('.mktoCheckboxList input').prop('checked', false)
                     }
-                    jq('.mktoButton').trigger('click');
+                    jQuery('.mktoButton').trigger('click');
                   } else{
                     document.cookie = "signedIn = false";
                     this.$emit('update:signed','false');
@@ -128,16 +126,23 @@
           },
           callMktoForms(){
             let that = this;
-            MktoForms2.loadForm("//app-sj18.marketo.com", "157-GQE-382", 14282,
+            MktoForms2.loadForm("http://app-sj18.marketo.com", "157-GQE-382", 14282,
                     function(form){
                       form.onSuccess(function(){
                         document.cookie = "signedIn = true";
-                        jq('#SignInModal').modal('hide');
+                        jQuery('#SignInModal').modal('hide');
                         that.$emit('update:signed','true'); 
                         return false;
                       });
                     })
           },
+          callme: selected =>{
+            jQuery('.mktoForm  #Country option[value="' + $.trim(selected.name) + '"]').attr("selected", "selected");
+            this.triggerU();
+            },
+            triggerU(){
+              jQuery('#Country').change();
+            }
         },
         beforeMount(){
           this.callMktoForms();

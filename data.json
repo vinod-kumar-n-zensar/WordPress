@@ -76,14 +76,14 @@
             "url": "/wp-content/uploads/sites/26/2018/09/chapter2_cat1-image.jpg",
             "headerInfo":"As business booms, you may have...",
             "toggleInfoPrimary":{
-                "title":"volume",
+                "title":"{volume}",
                 "headerInfo":"Too many cats show up!",
                 "bodyText":"One day, 100 people come to your home to drop off their cats. You can still only store 20, but those 20 require more time than normal to take because the other 80 cats and their owners make it harder to process incoming cats. This illustrates the problem with increased volume. You don’t have enough storage to hold all your data, and it slows down throughput of requests as a result.",
                 "extraInfo":"To address the issue, you could….",
                 "btnText":"Click for solution"
             },
             "toggleInfoSecondary":{
-                "title":"Scale up",
+                "title":"{Scale up}",
                 "headerInfo":"Add more cages.",
                 "bodyText":"Improve throughput by creating more capacity and working faster to process requests. In your cat business, you’d buy more cages and add more people to help take cats more quickly. In a database, we add more power to run the queries faster.",
                 "btnText":"Click for scenario"
@@ -92,14 +92,14 @@
         "toggleVelocity":{
             "url": "/wp-content/uploads/sites/26/2018/09/chapter2_cat2-image.jpg",
             "toggleInfoPrimary":{
-                "title":"velocity",
+                "title":"{velocity}",
                 "headerInfo":"The cats arrive all at once!",
                 "bodyText":"Twenty people all show up at one time to drop off their cats. They all get stuck in your door while you try to handle one cat at a time. This illustrates the problem of increased velocity. You can’t process data requests as fast as they come in, which slows down throughput.",
                 "extraInfo":"To address the issue, you could….",
                 "btnText":"Click for solution"
             },
             "toggleInfoSecondary":{
-                "title":"shard or scale out",
+                "title":"{shard or scale out}",
                 "headerInfo":"Open more locations.",
                 "bodyText":"Improve throughput and storage by breaking the data into unique sets. In your cat business, you could ask four of your neighbors to take 20 cats each, which would make room for a lot more cats. In a database scenario, we would add more machines and apply partitions that spread the data between them. In addition to storing more data, we increase throughput by efficiently routing requests across partitions.",
                 "btnText":"Click for scenario"
@@ -108,14 +108,14 @@
         "toggleVariety":{
             "url": "/wp-content/uploads/sites/26/2018/09/chapter2_cat3-image.jpg",
             "toggleInfoPrimary":{
-                "title":"Variety",
+                "title":"{Variety}",
                 "headerInfo":"Lions and tigers and….!",
                 "bodyText":"A zookeeper hears you do cats and drops off some lions and tigers. You can’t keep these guys in your living room anymore, and they won’t fit in your cages. This illustrates the problem of increased variety. You can’t use the current schema to store new data, and it’s really not the right-sized storage anyway.",
                 "extraInfo":"To address the issue, you could….",
                 "btnText":"Click for solution"
             },
             "toggleInfoSecondary":{
-                "title":"relax the schema",
+                "title":"{relax the schema}",
                 "headerInfo":"Build a zoo.",
                 "bodyText":"Increase the types of data you accept and improve your ability to find and query it by changing how you index it. In your cat business, this would mean adding all sorts of cages, habitats, and additional facilities that allow you to keep all types of different cats. You would need to be sure to organize (index) them well, so they entered your service and left as quickly and efficiently as possible.",
                 "btnText":"Click for scenario"
@@ -124,14 +124,14 @@
         "toggleDynamic":{
             "url": "/wp-content/uploads/sites/26/2018/09/chapter2_cat4-image.jpg",
             "toggleInfoPrimary":{
-                "title":"dynamic content",
+                "title":"{dynamic content}",
                 "headerInfo":"Owners drop off and pick up all day!",
                 "bodyText":"You start offering by-the-hour cat storage, in which people can bring in their cats according to cage availability. You need a way to let cat owners access the cats and the cages directly to change them as required. This illustrates the challenge of shifting from static to dynamic content. It’s no longer safe to assume that the data you put in this morning is the same data now. You need to allow for others to change it and for that change to become the new data truth.",
                 "extraInfo":"To address the issue, you could….",
                 "btnText":"Click for solution"
             },
             "toggleInfoSecondary":{
-                "title":"replicate locally",
+                "title":"{replicate locally}",
                 "headerInfo":"Clone cats nearby.",
                 "bodyText":"Improve throughput, availability, and durability by making exact copies. In your cat business, this would be strange but effective. You could clone the cats that come in and store them at your neighbors’ houses in identical living rooms, so cat owners could go to any one of the houses to drop off or pick up their cats. In a database, we make exact copies of data and let users query any of them to speed up how quickly they can access that data.",
                 "btnText":"Click for scenario"
@@ -140,14 +140,14 @@
         "toggleGlobal":{
             "url": "/wp-content/uploads/sites/26/2018/09/chapter2_cat5-image.jpg",
             "toggleInfoPrimary":{
-                "title":"global availability",
+                "title":"{global availability}",
                 "headerInfo":"Cats come from anywhere!",
                 "bodyText":"Word gets out about your business. People across the world want to keep their cats with you, all sizes and species of cats for all lengths of time. Your house is in one physical location. This illustrates the problem of global availability. Moving data (or cats) around the world, even at the speed of light, is more complicated and time consuming than moving it locally.",
                 "extraInfo":"To address the issue, you could….",
                 "btnText":"Click for solution"
             },
             "toggleInfoSecondary":{
-                "title":"replicate globally",
+                "title":"{replicate globally}",
                 "headerInfo":"Clone cats across the world.",
                 "bodyText":"Make exact copies of sharded databases and put them around the world where local users can access them. In your cat business, this one is also a little bizarre but potentially useful: you would launch a global franchise that clones the cats so they can be dropped off anywhere and picked up anywhere else in the world. In a database, we make replicated copies available in multiple regions around the world that anyone can read and write to, and we continuously sync the data sets so they are as consistent as possible, given the limitation of the speed of light.",
                 "btnText":"Click for scenario"

@@ -2,12 +2,12 @@
 body{
     color: $fontColor;
 }
-.modal-body{
-    .form-group input{
-        z-index: 9999;
-    }
+body p {
+    padding: 0;
 }
-body.modal-open { position: fixed; }
+.text-transform-lower{
+    text-transform: lowercase;
+}
 // wordpress Styles Starts
 .entry-footer, .entry-header{
     display: none !important;
@@ -83,6 +83,11 @@ body.modal-open { position: fixed; }
 .font-secondary-color{
     color: $white;
 }
+.cat-keep-container{
+    h3{
+        margin-bottom: 1em;
+    }
+}
 .common-page-head{
     background: $page-head-color;
     color:$white;
@@ -133,6 +138,7 @@ select, .v-select input[type=search], .v-select input[type=search]:focus, .v-sel
 }
 .v-select .dropdown-menu{
     max-height: 300px !important;
+    width: 98% !important;
 }
 .border-bottom-black{
     border-bottom: 1px solid $fontColor;
@@ -203,7 +209,10 @@ select, .v-select input[type=search], .v-select input[type=search]:focus, .v-sel
 }
 .tabView .tab-content div{
     @include my-padding-mixin(20px 0)
-} 
+}
+.author-container{
+    margin-top: 25px;
+}
 .vue-slider-component .vue-slider-piecewise{
     top: -80px;
 }
@@ -219,6 +228,9 @@ span.vue-slider-piecewise-label{
     .fa-chevron-right{
         vertical-align: sub;
     }
+}
+.vue-slider-piecewise-item{
+    width: auto !important;
 }
 .modal-body {
     .form-control{
@@ -287,7 +299,7 @@ span.vue-slider-piecewise-label{
     background: $imageurl;
     background-size: contain;
     border-radius: 0;
-    box-shadow: unset;
+    box-shadow: none;
 }
 
  .tabView{
@@ -349,7 +361,7 @@ span.vue-slider-piecewise-label{
 .link-box{
     @include border(2px,solid,$bgColorPrimary);
     @include bg($white);
-    @include my-padding-mixin(20px);
+    @include my-padding-mixin(27px 20px);
 }
 footer{
     .common-page-head{
@@ -376,9 +388,6 @@ footer{
    
   .slide-up.animate-active {
     transform: translateY(-100px)
-  }
-  .mktoForm{
-      display: none;
   }
   .commonGutSpaceBtm{
     margin-bottom: 50px;
@@ -430,6 +439,29 @@ footer{
     vertical-align: middle;
 
   }
+  .common-card-info {
+      h3{ 
+        span:first-child{
+            font-weight: 500;
+            font-size: 25.5px;
+            padding-right: 15px;
+            color: $bgColorPrimary;
+        }
+        span{
+      font-size: 15px;
+      color: $fontColor;
+      font-weight: normal;
+      vertical-align: middle;
+  }
+}
+}
+}
+#leap .common-card-info.active{
+    h3{ 
+        span{
+            color: $white;
+        }
+    }
 }
   .custom-control-label{
       p{
@@ -439,7 +471,7 @@ footer{
   .custom-control-label::before, .custom-control-label::after{
     width: 1.5rem;
     height: 1.5rem;
-    top: 53px;
+    top: 30px;
     border: 2px solid $faded-color;
     border-radius: 0;
     background: none;
@@ -453,14 +485,26 @@ footer{
     background-repeat: no-repeat;
     background-position: 36% 30%;
   }
+  .mktoFormRow.optOut.opt-out{
+      display: none;
+  }
+  .vs__actions{
+      width: 42px;
+  }
 // Small screens
 @media only screen { 
     body{font-size: 10px;}
     p{
         font-size: 15px;
     }
+    .md-d{
+        padding-top: 200px;
+    }
 } /* Define mobile styles */
 @media only screen and (max-width: 40em) {
+    .md-d{
+        padding-top: 250px;
+    }
     .navbar-brand{
         width: 40%;
     }
@@ -513,6 +557,12 @@ footer{
         width: auto;
     }
     footer{
+        .common-page-head{
+            @include my-padding-mixin(20px 0)
+        }
+        #AzureCosmosDBLink h1{
+            font-size: 21px;
+        }
         .common-banner-fix{
             background-position: center;
         }
@@ -528,16 +578,33 @@ footer{
     .common-padd-btm{
         @include my-padding-mixin(0 0 50px 0)
     }
-    .common-page-head.common-border-bottom, footer .common-page-head{
+    .common-page-head.common-border-bottom{
         @include my-padding-mixin(20px 0)
     }
     .custom-control-label::before, .custom-control-label::after{
         top: 62px;
     }
+    .db-link-box{
+        margin-top: 88%;
+    }
+    .link-box{
+        width: 70%;
+    }
+    footer .copyriteText-container p{
+        font-size: 12.75px;
+    }
+    footer .quote-container{ 
+        h2{
+        font-weight: 400;
+    }
+    }
  } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 
 // Medium screens
 @media only screen and (min-width: 40.063em) {
+    .md-d{
+        padding-top: 350px;
+    }
     .common-page-img-fix .common-page-subhead .imageContainer img{
         position: absolute;
         bottom: 4px;
@@ -547,11 +614,25 @@ footer{
     .common-padd-btm{
         @include my-padding-mixin(0 0 100px 0)
     }
-    .common-page-head.common-border-bottom, footer .common-page-head{
+    .common-page-head.common-border-bottom{
         @include my-padding-mixin(50px 0)
     }
     .common-div{
         @include my-padding-mixin(100px 0)
+    }
+    .db-link-box{
+        margin-top: 61%;
+    }
+    .copyriteText-container p{
+        margin-bottom: 207px;
+        font-size: 12.75px;
+    }
+    footer .quote-container{ 
+        @include my-padding-mixin(0);
+        h2{
+        font-weight: 400;
+        font-size: 22.75px;
+    }
     }
  } /* min-width 641px, medium screens */
 
@@ -603,6 +684,9 @@ footer{
 }
 // Large screens
 @media only screen and (min-width: 64.063em) {
+    .lg-d{
+        padding-top:300px;
+    }
     #deliver {
         .common-page-head {
             @include my-padding-mixin(100px 0)
@@ -633,6 +717,12 @@ footer{
         strong{
             position: relative;
             left: 13px;
+        }
+    }
+    #pills-tabContent{
+        @include my-padding-mixin(50px 0);
+        h3{
+            font-weight: 400;
         }
     } 
     .banner{
@@ -687,6 +777,7 @@ footer{
     }
     footer{
         .common-page-head{
+            @include my-padding-mixin(70px 0);
             h2{
                 line-height: 1.4;
                 font-weight: normal;
@@ -699,18 +790,24 @@ footer{
         }    
         .db-link-box{
             #AzureCosmosDBLink{
-                width: 37%;
+                width: 38%;
             }
         }   
     }
     .db-link-box{
-        margin-top: 43%;
+        margin-top: 44%;
     }
     #leap .toggleVolume{
         padding-top: 10px;
     }
     .copyriteText-container p{
         font-size: 12.75px;
+        margin-bottom: 88px;
+    }
+    footer .quote-container{ 
+        h2{
+        font-size: 32.25px;
+    }
     }
 } /* min-width 1025px, large screens */
 

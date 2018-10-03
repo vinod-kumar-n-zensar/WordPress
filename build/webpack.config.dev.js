@@ -16,6 +16,7 @@ module.exports = {
       poll: true
     }
   },
+ 
   module: {
     rules: [
       {
@@ -54,6 +55,14 @@ module.exports = {
       template: 'index.html',
       inject: true
     }),
+    new webpack.ProvidePlugin({
+      Promise: 'es6-promise-promise', // works as expected
+  }),
+    new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery"
+    })
   //  new UglifyJsPlugin({
    //   test: /\.js(\?.*)?$/i
     //})

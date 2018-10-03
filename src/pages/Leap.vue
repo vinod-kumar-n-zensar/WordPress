@@ -43,13 +43,11 @@
                             
                             <div class="common-card-info card cursor-pointer" v-on:click="toggle = !toggle"  v-bind:class="{ active: toggle }">
                                 <div v-show="toggle">
-                                <h3 class="blue">{{info.toggleVolume.toggleInfoSecondary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleVolume.toggleInfoSecondary.title}}</strong></p>
+                                <h3 class="blue"><span>{{info.toggleVolume.toggleInfoSecondary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleVolume.toggleInfoSecondary.title}}</span></h3>
                                     <p>{{info.toggleVolume.toggleInfoSecondary.bodyText}}</p>
                                 </div>
                                 <div v-show="!toggle">
-                                    <h3 class="blue">{{info.toggleVolume.toggleInfoPrimary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleVolume.toggleInfoPrimary.title}}</strong></p>
+                                    <h3 class="blue"><span>{{info.toggleVolume.toggleInfoPrimary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleVolume.toggleInfoPrimary.title}}</span></h3>
                                     <p>{{info.toggleVolume.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleVolume.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
@@ -67,13 +65,13 @@
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div class="common-card-info card cursor-pointer" v-on:click="velocity = !velocity" v-bind:class="{ active: velocity }">
                                 <div v-show="velocity">
-                                <h3 class="blue">{{info.toggleVelocity.toggleInfoSecondary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleVelocity.toggleInfoSecondary.title}}</strong></p>
+                                <h3 class="blue"><span>{{info.toggleVelocity.toggleInfoSecondary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleVelocity.toggleInfoSecondary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleVelocity.toggleInfoSecondary.bodyText}}</p>
                                 </div>
                                 <div v-show="!velocity" >
-                                    <h3 class="blue">{{info.toggleVelocity.toggleInfoPrimary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleVelocity.toggleInfoPrimary.title}}</strong></p>
+                                    <h3 class="blue"><span>{{info.toggleVelocity.toggleInfoPrimary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleVelocity.toggleInfoPrimary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleVelocity.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleVelocity.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
@@ -85,13 +83,13 @@
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div class="common-card-info card cursor-pointer" v-on:click="variety = !variety" v-bind:class="{ active: variety }">
                                 <div v-show="variety">
-                                <h3 class="blue">{{info.toggleVariety.toggleInfoSecondary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleVariety.toggleInfoSecondary.title}}</strong></p>
+                                <h3 class="blue"><span>{{info.toggleVariety.toggleInfoSecondary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleVariety.toggleInfoSecondary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleVariety.toggleInfoSecondary.bodyText}}</p>
                                 </div>
                                 <div v-show="!variety" >
-                                    <h3 class="blue">{{info.toggleVariety.toggleInfoPrimary.headerInfo}} </h3>
-                                    <p><strong>{{info.toggleVariety.toggleInfoPrimary.title}}</strong></p>
+                                    <h3 class="blue"><span>{{info.toggleVariety.toggleInfoPrimary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleVariety.toggleInfoPrimary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleVariety.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleVariety.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
@@ -109,13 +107,13 @@
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div class="common-card-info card cursor-pointer" v-on:click="dynamic = !dynamic" v-bind:class="{ active: dynamic }">
                                 <div v-show="dynamic">
-                                <h3 class="blue">{{info.toggleDynamic.toggleInfoSecondary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleDynamic.toggleInfoSecondary.title}}</strong></p>
+                                <h3 class="blue"><span>{{info.toggleDynamic.toggleInfoSecondary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleDynamic.toggleInfoSecondary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleDynamic.toggleInfoSecondary.bodyText}}</p>
                                 </div>
                                 <div v-show="!dynamic" >
-                                    <h3 class="blue">{{info.toggleDynamic.toggleInfoPrimary.headerInfo}} </h3>
-                                    <p><strong>{{info.toggleDynamic.toggleInfoPrimary.title}}</strong></p>
+                                    <h3 class="blue"><span>{{info.toggleDynamic.toggleInfoPrimary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleDynamic.toggleInfoPrimary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleDynamic.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleDynamic.toggleInfoPrimary.extraInfo}}</p>
                                 </div>
@@ -128,13 +126,13 @@
                         <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
                             <div class="common-card-info card cursor-pointer" v-on:click="global = !global" v-bind:class="{ active: global }">
                                 <div v-show="global">
-                                <h3 class="blue">{{info.toggleGlobal.toggleInfoSecondary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleGlobal.toggleInfoSecondary.title}}</strong></p>
+                                <h3 class="blue"><span>{{info.toggleGlobal.toggleInfoSecondary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleGlobal.toggleInfoSecondary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleGlobal.toggleInfoSecondary.bodyText}}</p>
                                 </div>
                                 <div v-show="!global" >
-                                    <h3 class="blue">{{info.toggleGlobal.toggleInfoPrimary.headerInfo}}</h3>
-                                    <p><strong>{{info.toggleGlobal.toggleInfoPrimary.title}}</strong></p>
+                                    <h3 class="blue"><span>{{info.toggleGlobal.toggleInfoPrimary.headerInfo}}</span> <span class="text-transform-lower">{{info.toggleGlobal.toggleInfoPrimary.title}}</span></h3>
+                                    
                                     <p>{{info.toggleGlobal.toggleInfoPrimary.bodyText}}</p>
                                     <p>{{info.toggleGlobal.toggleInfoPrimary.extraInfo}}</p>
                                 </div>

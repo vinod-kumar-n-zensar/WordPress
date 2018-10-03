@@ -67,7 +67,7 @@
                                 </div>
                                 <div  class="col-lg-9 col-lg-3 col-xs-12 col-sm-12">
                                     <h3 class="blue">{{items.content.head}}</h3>
-                                    <p>{{items.content.content.infoPrimary}}</p>
+                                    <p  v-html="items.content.content.infoPrimary">{{items.content.content.infoPrimary}}</p>
                                     <ul class="">
                                         <li v-for="listData in items.content.content.listData" >
                                             <p><span  v-html="listData.title">{{listData.title}}</span> <span>{{listData.content}}</span></p>
@@ -114,8 +114,7 @@ Vue.component('vue-slider',vueSlider)
                     width:"96%",
                     style:{
                         "padding":"0",
-                        "margin": "auto",
-                        "transform": "0"
+                        "margin": "auto"
                     },
                     startAnimation: false,
                     value: 0,
@@ -141,6 +140,9 @@ Vue.component('vue-slider',vueSlider)
                         "Consistent prefix",
                         "Eventual "
                     ],
+                    piecewiseStyle:{
+                        "width": "auto"
+                    },
                     labelStyle:{
                         "width": "auto",
                         "text-align": "center"
@@ -187,6 +189,7 @@ Vue.component('vue-slider',vueSlider)
             mounted(){
                 let iconel = '<svg aria-hidden="true" data-prefix="fas" data-icon="chevron-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" class="svg-inline--fa fa-chevron-right fa-w-6"><path fill="currentColor" d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z" class=""></path></svg>'
                 $('.vue-slider-piecewise-label').append( iconel );
+                $('.vue-slider-piecewise-item:first-child').addClass('active');
             }
 }
 </script>

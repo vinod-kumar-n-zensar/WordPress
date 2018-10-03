@@ -17,11 +17,11 @@
             <div v-else  :style="{height: windowHeight + 'px'}">
                 <div class="container-fluid common-page-head">
                     <div class="container">
-                        <div class="col-lg-10 mx-auto">
+                        <div class="col-lg-10 mx-auto quote-container">
                             <div>
                                 <h2>{{info.signed.head}}</h2>
                             </div>
-                            <div>
+                            <div class="author-container">
                                 <h4>{{info.signed.author}}</h4>
                             </div>
                         </div>
