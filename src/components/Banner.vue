@@ -2,7 +2,7 @@
 <template>
 <div class="banner" :style="{height: windowHeight + 'px'}" ref="banner-box">
     <div class="header-row common-banner-fix" id="header-row" :style=style>
-        <div id="color-overlay" :style="{height: windowHeight + 24 + 'px'}" class="d-sm-block d-md-block d-lg-none d-xl-none"></div>
+        <div id="color-overlay" :style="{height: windowHeight + 10 + 'px'}" class="d-sm-block d-md-block d-lg-none d-xl-none"></div>
    <div class="container ">
    <div class="d-sm-block d-md-block d-lg-none d-xl-none md-d">
         <div class="row  justify-content-center">     
